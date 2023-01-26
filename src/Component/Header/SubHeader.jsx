@@ -4,7 +4,7 @@ import { addToCart, deleteFromCart } from "../Redux/CreateCart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Table } from "react-bootstrap";
 const SubHeader = ({products }) => {
   const [product, setProduct] = useState([]);
   const [quantity, setQuantity] = useState({});
@@ -30,7 +30,7 @@ const SubHeader = ({products }) => {
 
   return (
     <div>
-      <table className="table" style={{ width: "100%" }}>
+      <Table striped bordered hover className="table" style={{ width: "100%" }}>
         <thead>
           <tr className="text-center">
             <th scope="col" style={{ width: "16.66%" }}>
@@ -84,7 +84,7 @@ const SubHeader = ({products }) => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 };
